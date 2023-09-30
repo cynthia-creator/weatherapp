@@ -20,11 +20,39 @@
       <form id="search-form" class="mb-3">
         <div class="row">
           <div class="col-md-9">
-            
+            <input 
+            type="text">
+            placeholder="Type in city name"
+            class="form-control" 
+            id="city-input"
+            autocomplete="off"
+            />
         </div>
-      </form>
-    </div> 
-    
+        <div class="col-md-3">
+          <input
+          type="submit"
+          value="search"
+          class="btn btn-primary w-100"/>
+        </div>
+      </div> 
+      </form> 
+      <div class="overview">
+        <h1 id="city"></h1>
+        <ul>
+          <li>Last updated: <span id="date"></span></li>
+          <li id="description" >Clear</li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="d-flex weather-temperature">
+            <img src="https://previews.123rf.com/images/carbo82/carbo821206/carbo82120600087/14194624-icon-sunny-weather.jpg"
+            alt="Clear"
+            id="icon"
+            />
+          </div>
+        </div>
+      </div>    
     <script src="src/index.js"></script>
   </body>
 </html>
