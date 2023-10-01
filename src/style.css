@@ -1,3 +1,7 @@
-h1{
-    color: blue;
+li {
+    color: #fff;
+    display: block;
+    text-align: left;
+    font-family: arial, sans-serif;
+    font-size: 12px font-weight 400 height 48px line-height 16px padding-left 9px;
 }
