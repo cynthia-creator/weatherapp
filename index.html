@@ -30,24 +30,45 @@
         <input
          type="submit"
           value="search"
-          class="btn search-button"
+          class="btn btn-primary w-100"
           />          
          </div>
     </div>
   </form>
-  <div class="overview">
-    <h1 id="city"></h1>
-    <ul>
-    <li>Last updated: <span id="date"></span></li>
-    <li id="description" >Clear</li>
-    </ul>
+    <h1><span id="city"></span> <span id="country"></span>
+    </h1>
+    <p id="date"></p>
+    <p id="description"></p> 
+    <div class="weather">
 <div class="row">
-  <div class="col-2"></div>
-  <div class="col-2"></div>
-  <div class="col-2"></div>
-  <div class="col-2"></div>
-  <div class="col-2"></div>
-  <div class="col-2"></div>
+  <div class="col-6 weather-temp">
+    <img
+    class="sun"
+    src=""
+    alt="temperature-icon"
+    id="weather-icon"
+    />
+    <span class="temp" id="temperature"></span>
+    <span class="deg"><a href="#" id="celcius" class="active">&deg;C |</a></span>
+    <span class="deg"><a href="#" id="farenheit">&deg;F</a></span> 
+  </div>
+  <div class="col-6">
+  <ul>  
+    <li>Humidity: <span id="humidity"></span>%</li> 
+    <li>Wind:  <span id="wind"></span>km/h</li>  
+  </ul>
+</div>
+</div>
+    </div>
+    <hr>
+  <div class="forecast" id="forecast"></div>
+  </div>
+  <small>
+    <a href="">Open-source Code</a>
+    by Cynthia Kamuzembe
+  </small>
+   </div>
+   <script src="src/index.js"></script>
   </body>
   </html>
     
