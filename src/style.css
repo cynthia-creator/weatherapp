@@ -6,7 +6,7 @@ li {
     font-size: 12px font-weight 400 height 48px line-height 16px padding-left 9px;
 }
 .weather-app {
-border: 3px solid #dadada;
-border-radius: 25px;
+border: 5px solid #dadada;
+border-radius: 30px;
 padding: 30 px;
 }
