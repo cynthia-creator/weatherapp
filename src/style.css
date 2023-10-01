@@ -11,7 +11,7 @@ border-radius: 10px;
 padding: 30 px;
 }
 .shadow {
-    max-width: 500px;
+    max-width: 600px;
     margin: 30px auto;
 }
 #description::first-letter{
