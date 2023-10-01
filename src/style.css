@@ -10,3 +10,7 @@ border: 2px solid #dadada;
 border-radius: 10px;
 padding: 30 px;
 }
+.shadow {
+    max-width: fit-content;
+    margin: 30px auto;
+}
