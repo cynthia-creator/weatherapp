@@ -14,3 +14,12 @@ padding: 30 px;
     max-width: fit-content;
     margin: 30px auto;
 }
+#description::first-letter{
+    text-transform: capitalize;
+}
+body{
+    margin-top: 20px;
+    background-image: url(https://media.istockphoto.com/id/502931307/photo/sun-shining-in-tropical-island.jpg?s=1024x1024&w=is&k=20&c=fT9d4iA_DfrID_Xk2KtuveJMccMjBKAchy7p6wPCkCE=);
+    background-repeat:no-repeat ;
+    width:100% ;
+}
