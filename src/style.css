@@ -37,4 +37,16 @@ a {
     text-decoration: none;
 }
 a.active{color: black;
-text-decoration: none;}
+text-decoration: none;
+}
+h1{
+    color: blue;
+    display: block;
+    font-family: "google sans",arial,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    height: 26px;
+    line-height: 2opx;
+    text-align: left;
+    margin: 0;
+}
