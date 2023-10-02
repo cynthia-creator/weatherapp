@@ -12,13 +12,13 @@ function formatDate(timestamp){
         "Saturday"
     ];
     let day = days[date.getDay()];
-    if (hour <10) {
+    if (hours <10) {
         hours ="0" + hours;
     }
     if (minutes<10){
         minutes = "0" + minutes;
     }
-    return `${day} ${hours} ${minutes}`;
+    return `${day} ${hours}: ${minutes}`;
 }
 function isToday(timestamp) {
     const inputDate = new Date(timestamp *1000);
@@ -45,8 +45,8 @@ function showWeatherForecast(response) {
     forecast.forEach(function(forecastDays,index) {
         let dayName;
         if (index===0&& isToday(forecastDays.time)){
-            dayName ="Today";}
-            else{
+            dayName ="Today";
+        } else{
             dayName =formatDay(forecastDays.time);
     }
     forecastHTML +=
@@ -71,7 +71,7 @@ width="36"
         forecastElement.innerHTML = forecastHTML;
 });
 }
-function get forecast(coordinates){
+function getforecast(coordinates){
    let apikey="6fafa9fdc6e57ce2b99a63d7d1fceef8"
    let apiurl=`https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.latitude}&lon=${coordinates.longitude}&appid=${apikey}`
 axios.get(apiurl). then(showWeatherForecast);
@@ -137,7 +137,7 @@ function showFarenheitTemperature(event) {
 function showCelsiusTemperature(event) {
     event.preventDefault();
     let temperatureElement= document.querySelector("#temperature");
-    temperatureElement.innerHTML = Math.round{farenheitTemperature};
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
     celsius.classList.add("active");
     farenheit.classList.remove("active")
 }
