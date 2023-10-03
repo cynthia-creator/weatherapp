@@ -74,7 +74,7 @@ width="36"
         forecastElement.innerHTML = forecastHTML;
 
 }
-function getforecast(coordinates){
+function getForecast(coordinates){
    let apikey = "0f8bc384a7c31b717a18cfe38a95ae06";
    let apiurl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metri`;
 axios.get(apiurl). then(showWeatherForecast);
@@ -127,7 +127,7 @@ function search(city){
     let encodedCity=encodeURIComponent(city);
 
     let apiurl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metri`;
-    axios.get(apiurl).then(showTemperature);
+    axios.get(apiurl).then(showWeatherForecast);
 }
 //this function gets the input value from the form and pass it to function search to make an API call
 function searchCity(event){
