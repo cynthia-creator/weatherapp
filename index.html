@@ -1,68 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"        
-       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
-      crossorigin="anonymous"/>
-      <link rel="stylesheet" href="src/style.css"/>
-   </head> 
+<head>
+  <meta charset="UTF-8"/>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link  rel="stylesheet"   
+   href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+   integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"/>
+    <link rel="stylesheet"   href="src/style.css"/>
+  </head>
   <title>weatherapp</title>
-  <body>
-    <div class="boarder p-5 mt-3 shadow">
-   <div class="card-body"> 
-<div class="container">
-  <div class="weather-app">
-  <form class="search-form" class="mb-3" 
-    id="city-search-form">
+<body>
+  <div class="border p-5 mt-3 shadow">
+<div class="card-body">
+  <div  class="container">
+  <div class="weather-app"> 
+    <form class="search-form mb-3" id="city-search-form">
       <div class="row">
-      <div class="col-9">           <input
-        type="search"
-        placeholder="Type in city name"
-        class="form-control w-100"
-        id="search-input"
-        autocomplete="off"
-        />
-        </div>
+        <div class="col-9">
+          <input
+          type="search"
+          placeholder="Type in city name"
+          class="form-control w-100"
+          id="search-input"
+          autocomplete="off"
+          />
+          </div>
         <div class="col-md-3">
-        <input
-         type="submit"
-          value="search"
-          class="btn btn-primary w-100"
-          />          
-         </div>
-    </div>
-  </form>
-    <h1><span id="City"></span> <span id="country"></span>
+      <input type="submit"
+      value="search"
+      class="btn-btn-primary w-100"
+      />
+      </div>
+      </div>
+    </form> 
+    <h1><span id="city"></span>
+      <span id="country"></span>
     </h1>
     <p id="date"></p>
-    <p id="description"></p> 
+      <p id="description"></p>
     <div class="weather">
-<div class="row">
-  <div class="col-6 weather-temp">
-    <img
+    <div class="row">
+     <div
+     class="col-6" weather-temp>
+    <img 
     class="sun"
-    src=""
-    alt="temperature-icon" id="weather-icon"
+    src=""    
+    alt="temperature-icon"
+    id="weather-icon"
     />
-    <span class="temp" id="temperature"></span>
-    <span class="deg"><a href="#" id="celsius" class="active">&deg;C
-       |</a></span>
-    <span class="deg"><a href="#" id="farenheit">&deg;F</a></span> 
-  </div>
-  <div class="col-6">
-  <ul>  
+  <span class="temp"  id="temperature"></span>
+  <span class="deg"><a href="#" id="celsius" class="active">
+    &deg;C|</a></span>
+
+    <span class="deg"><a href="#" id="farenheit">&deg;F</a></span>
+    </div>
+    <div class="col-6">
+     <ul>  
     <li>Humidity: <span id="humidity"></span>%</li> 
     <li>Wind:  <span id="wind"></span>km/h</li>  
-  </ul>
-</div>
-</div>
-    </div>
-    <hr>
-  <div class="forecast" id="forecast">    
+     </ul> 
+    </div>  
   </div>
+  </div>
+  <hr>
+  <div
+  class="forecast" id="forecast"></div>
   </div>
   <small>
     <a href="https://github.com/cynthia-creator/weatherapp"  
@@ -73,5 +77,4 @@
    </div>
    <script src="src/index.js"></script>
   </body>
-  </html>
-    
+</html>
