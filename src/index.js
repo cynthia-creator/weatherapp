@@ -25,9 +25,12 @@ function isToday(timestamp) {
     const today = new Date();
 
     return (
-        inputDate.getDate() ===today.getDate() &&
-        inputDate.getMonth() ===today.getMonth()&&
-        inputDate.getFullYear() ===today.getFullYear()
+        inputDate.getDate()
+         ===today.getDate() &&
+        inputDate.getMonth()
+         ===today.getMonth()&&
+        inputDate.getFullYear()
+         ===today.getFullYear()
     );
 }
 function formatDay(timestamp) {
@@ -39,23 +42,25 @@ function formatDay(timestamp) {
 function showWeatherForecast(response) {
     let forecast =response.data.daily;
     console.log(forecast)
-    let forecastElement =document.getElementById("forecast");
+    let forecastElement =
+    document.getElementById("forecast");
 
     let forecastHTML ="";
     forecast.forEach(function
-        (forecastDays,index) {
+        (forecastDays, index) {
         console.log(forecastDays)
         let dayName;
-        if (index===0&& isToday(forecastDays.time)){
+        if (index===0&& isToday(forecastDays.dt)){
             dayName ="Today";
         } else{
-            dayName =formatDay(forecastDays.time);
+            dayName =formatDay(forecastDays.dt);
     }
     forecastHTML +=
     `<div class ="forecast ${index===0 ? "highlight":""}">
     <div class ="days">
         <div class="title">${dayName}</div>
-        <div class= "icon">
+        <div
+         class= "icon">
             <Img
             src ="https://cdn-icons-png.flaticon.com/128/10484/10484062.png"
 alt ="icon" width="36"
