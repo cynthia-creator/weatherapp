@@ -54,7 +54,7 @@ function showWeatherForecast(response) {
                 <div class="days">
                     <div class="title">${dayName}</div>
                     <div class="icon">
-                        <img src="https://openweathermap.org/img/wn.pgn"
+                        <img src="https://openweathermap.org/img/wn/50d@2x.png"
                          alt="icon" width="36" />
                     </div> 
                     <div class="forecast-temp">
