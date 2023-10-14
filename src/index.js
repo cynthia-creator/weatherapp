@@ -71,7 +71,7 @@ function showWeatherForecast(response) {
                 </div>
             </div>`;
   });
-
+forecastHTML= forecastHTML+`</div>`
   forecastElement.innerHTML = forecastHTML;
 }
 
