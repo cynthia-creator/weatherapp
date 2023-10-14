@@ -59,8 +59,7 @@ function showWeatherForecast(response) {
                         <img src="https://openweathermap.org/img/wn/50d@2x.png"
                          alt="icon" width="36" />
                     </div> 
-                    </div>
-                      <div class="forecast-temp">
+                     <div class="forecast-temp">
                         <span class="high">${Math.round(
                           forecastDays.temp.max
                         )}&deg;</span>
