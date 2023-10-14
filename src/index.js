@@ -50,8 +50,9 @@ function showWeatherForecast(response) {
     } else {
       dayName = formatDay(forecastDays.dt);
     }
-    forecastHTML += `<div class="forecast ${index === 0 ? "highlight" : ""}">
-    <div slass="col-2">
+    forecastHTML += `<div slass="col-2">
+    <div class="forecast ${index === 0 ? "highlight" : ""}">
+    
     <div class="days">
                     <div class="title">${dayName}</div>
                     <div class="icon">
