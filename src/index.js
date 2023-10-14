@@ -41,7 +41,7 @@ function showWeatherForecast(response) {
   console.log(forecast);
   let forecastElement = document.getElementById("forecast");
 
-  let forecastHTML = "";
+  let forecastHTML = `<div class="-row">`;
   forecast.forEach(function (forecastDays, index) {
     console.log(forecastDays);
     let dayName;
@@ -54,7 +54,8 @@ function showWeatherForecast(response) {
                 <div class="days">
                     <div class="title">${dayName}</div>
                     <div class="icon">
-                        <img src="https://cdn-icons-png.flaticon.com/128/10484/10484062.png" alt="icon" width="36" />
+                        <img src="https://openweathermap.org/img/wn.pgn"
+                         alt="icon" width="36" />
                     </div> 
                     <div class="forecast-temp">
                         <span class="high">${Math.round(
