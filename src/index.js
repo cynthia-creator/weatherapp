@@ -50,16 +50,16 @@ function showWeatherForecast(response) {
     } else {
       dayName = formatDay(forecastDays.dt);
     }
-    forecastHTML += <div class ="col-2">
-    `<div class="forecast ${index === 0 ? "highlight" : ""}">
-                <div class="days">
+    forecastHTML += `<div class="forecast ${index === 0 ? "highlight" : ""}">
+    <div slass="col-2">
+    <div class="days">
                     <div class="title">${dayName}</div>
                     <div class="icon">
                         <img src="https://openweathermap.org/img/wn/50d@2x.png"
                          alt="icon" width="36" />
                     </div> 
                     </div>
-                     <div class="forecast-temp">
+                      <div class="forecast-temp">
                         <span class="high">${Math.round(
                           forecastDays.temp.max
                         )}&deg;</span>
