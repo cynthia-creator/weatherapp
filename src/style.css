@@ -132,7 +132,7 @@ vertical-align: top;
 }
 .container{
     position: absolute;
-    top: 20%;
+    top:50%;
     left: 40%;
     border: radius 700px;
     max-width: 400px;
