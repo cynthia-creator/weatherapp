@@ -9,7 +9,7 @@ li {
     font-family:"Quick",sans-serif ;
     max-width: 800px;
     margin: 150px auto;
-border: 2px solid #dadada;
+border: none  ;
 border-radius: 25px;
 padding: 20 px;
 background-color: rgba(242, 216,216,0.2);
@@ -130,15 +130,7 @@ vertical-align: top;
     padding: 16px;
     box-sizing: border-box;
 }
-.container{
-    position: absolute;
-    top:50%;
-    left: 40%;
-    border: radius 700px;
-    max-width: 400px;
-
-}
-.col-3 input{
+col input{
     border-radius: 30px;
     background: #33408a;
 }
