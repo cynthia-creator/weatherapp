@@ -42,36 +42,31 @@ function showWeatherForecast(response) {
   let forecastElement = document.getElementById("forecast");
 
   let forecastHTML = `<div class="row">`;
-  forecast.forEach(function (forecastDays, index) {
-    console.log(forecastDays);
-    let dayName;
-    if (index === 0 && isToday(forecastDays.dt)) {
-      dayName = "Today";
-    } else {
-      dayName = formatDay(forecastDays.dt);
-    }
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6){    
     forecastHTML =
     forecastHTML +
      `<div slass="col-2">
-    <div class="forecast ${index === 0 ? "highlight" : ""}">
-        <div class="days">
-                    <div class="title">${dayName}</div>
-<div class
-                    <img src="http://openweathermap.org/img/wn/${
-                          forecastDays.weather[0].icon
-                          }50d@2x.png"
+    <div class="weather-forecast-date">$
+        {formatDay(forecastDay.dt)}</div>
+          <img
+           src="http://openweathermap.org/img/wn/${
+             forecastDay.weather[0].icon
+                          }@2x.png"
                          alt=""
-                          width="42" />
-                          <div class="forecast-temp">
-                        <span class="high">${Math.round(
-                          forecastDays.temp.max
-                        )}&deg;</span>
-                        <span class="low">${Math.round(
-                          forecastDays.temp.min
-                        )}&deg;</span>
+                          width="42"
+                           />
+<div class="weather-forecast-temperatures">
+                          <span class="weather-forecast-temperature-max">${Math.round(
+                          forecastDay.temp.max
+                        )}°</span>
+                        <span class="weather-forecast-temperature-min">${Math.round(
+                          forecastDay.temp.min
+                        )}°</span>
                     </div>
                    </div>;
                    `;
+                        }
                          });
 forecastHTML= forecastHTML+`</div>`;
   forecastElement.innerHTML = forecastHTML;
@@ -101,7 +96,7 @@ function showTemperature(response) {
   WindElement.innerHTML = Math.round(response.data.wind.speed);
 
   let humidityElemen  = document.querySelector("#humidity");
-  humidityElement.innerHTML = response.data.main.humidity;
+  humidityElemen.innerHTML = response.data.main.humidity;
 
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
@@ -157,8 +152,8 @@ function showCelsiusTemperature(event) {
 let form = document.querySelector("#city-search-form");
 form.addEventListener("submit", searchCity);
 
-let farenheit = document.querySelector("#fahrenheit");
-farenheit.addEventListener("click", showFarenheitTemperature);
+let farenheit = document.querySelector("#farenheit");
+farenheit.addEventListener("click",showFarenheitTemperature);
 
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", showCelsiusTemperature);
