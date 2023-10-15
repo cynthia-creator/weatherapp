@@ -1,16 +1,27 @@
-li {
+body{
+    margin: 0 auto;
+    text-align: center;
+    background-color: aqua;
+    background-size: cover;
+    li {
     color: #810d0d;
     font-size: 20px ;
     line-height: 25px;
     list-style: none;
 }
+ul{list-style: none;
+    margin: right 25px;
+}
+.container{
+    margin-top: 20px;
+}
 .weather-app {
-    font-family:"Quick",sans-serif ;
-    max-width: 800px;
-    margin: 150px auto;
+    
+    max-width: 425px;
+    margin: 0 auto;
 border: none  ;
-border: radius 100px;
-padding: 45 px;
+border: radius 20px;
+padding: 16 px;
 background-color: rgba(242, 216,216,0.2);
 }
 .shadow {background-color: #FF0A6C;
@@ -20,12 +31,7 @@ background-color: rgba(242, 216,216,0.2);
 #description:first-letter{
     text-transform: capitalize;
 }
-body{
-    background-image:"https://images.pexels.com/photos/843251/pexels-photo-843251.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" ;
-    background-size: cover;
-    background-position:center ;
-    background-attachment: fixed;
-    background-repeat:no-repeat ;
+
 }
 .elements{
     margin-top: 0;
@@ -102,10 +108,8 @@ p {
 input{
     margin-bottom: 10px;
 }
-ul{
-    margin: 0;
-    padding: 0px;
-}
+
+
 .deg{
 color: bisque;
 display: inline-block;
