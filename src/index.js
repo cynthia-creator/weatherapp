@@ -56,7 +56,7 @@ function showWeatherForecast(response) {
     <div class="forecast ${index === 0 ? "highlight" : ""}">
         <div class="days">
                     <div class="title">${dayName}</div>
-
+<div class
                     <img src="http://openweathermap.org/img/wn/${
                           forecastDays.weather[0].icon
                           }50d@2x.png"
@@ -109,7 +109,7 @@ function showTemperature(response) {
   let iconElement = document.querySelector("#weather-icon");
   iconElement.setAttribute(
     "src",
-    "https://cdn-icons-png.flaticon.com/128/10484/10484062.png"
+    `https://openweathermap.org/wn/${response.data.weather[0].icon}@2x.png`
   );
   celsiusTemperature = response.data.main.temp;
   getForecast(response.data.coord);
