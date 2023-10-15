@@ -132,10 +132,10 @@ vertical-align: top;
 }
 .container{
     position: absolute;
-    top: 40%;
+    top: 20%;
     left: 40%;
-    transform:translate(-40%,-40%) ;
-    border: radius 500px;
+    transform:translate(-20%,-40%) ;
+    border: radius 700px;
     max-width: 400px;
 
 }
