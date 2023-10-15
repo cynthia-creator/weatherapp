@@ -6,26 +6,30 @@ li {
     font-size: 12px font-weight 400 height 48px line-height 16px padding-left 9px;
 }
 .weather-app {
+    font-family:"Quick",sans-serif ;
+    max-width: 800px;
+    margin: 150px auto;
 border: 2px solid #dadada;
-border-radius: 10px;
-padding: 30 px;
+border-radius: 25px;
+padding: 20 px;
+background-color: rgba(242, 216,216,0.2);
 }
 .shadow {
-    max-width: 1000px;
-    margin: 30px auto;
+    max-width: 900px;
+    margin: 150px auto;
 }
 #description::first-letter{
     text-transform: capitalize;
 }
-body{
-    margin:0;
-    background-image: url(https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+body{font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
+    background-position:center ;
+    background-color: aqua;
     background-repeat:no-repeat ;
-    width: max-content;
-    padding: 0;
 }
 .elements{
     margin-top: 0;
+
 }
 a #farenheit,
 a #celsius{
@@ -44,12 +48,12 @@ h1{
     color: blue;
     display: block;
     font-family: "google sans",arial,sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 40px;
+    font-weight: 600;
     height: 26px;
-    line-height: 2opx;
+    line-height: 48px;
     text-align: left;
-    margin: 0;
+    margin:20px 0 10px;
 }
 p {
     color: bisque;
@@ -64,6 +68,7 @@ p {
 }
 .weather{
     margin-top: 20px;
+    text-align: center;
 }
 .cloud{
     color: bisque;
@@ -92,8 +97,8 @@ input{
     margin-bottom: 10px;
 }
 ul{
-    margin-bottom: 0;
-    padding-left: 60px;
+    margin: 0;
+    padding: 0px;
 }
 .deg{
 color: bisque;
@@ -107,12 +112,13 @@ margin-top: 6px;
 vertical-align: top;
 }
 .forcast-days{
-    display: flex;
+    display:inline-flex;
     justify-content: space-between;
     gap: 0;
-    align-items: center;
+    list-style: none;
 }
-.forcast-temp{
+    
+    .forcast-temp{
     font-size: 13px;
 }
 .forcast-temp .low{
@@ -125,8 +131,8 @@ vertical-align: top;
     box-sizing: border-box;
 }
 .container{
-    border-radius:400px;
-    max-width: 500px;
+    border: radius 800px;
+    max-width: 900px;
 
 }
 .col-3 input{
