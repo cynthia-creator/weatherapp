@@ -13,7 +13,7 @@ border-radius: 25px;
 padding: 20 px;
 background-color: rgba(242, 216,216,0.2);
 }
-.shadow {
+.shadow {background-color: #FF0A6C;
     max-width: 900px;
     margin: 150px auto;
 }
