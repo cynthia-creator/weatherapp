@@ -40,7 +40,7 @@ function showWeatherForecast(response) {
   let forecast = response.data.daily;
   console.log(forecast);
   let forecastElement = document.getElementById("forecast");
-  
+
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDays, index) {
     console.log(forecastDays);
@@ -57,14 +57,12 @@ function showWeatherForecast(response) {
         <div class="days">
                     <div class="title">${dayName}</div>
 
-                    <div class="icon">
-                        <img src="http://openweathermap.org/img/wn/${
+                    <img src="http://openweathermap.org/img/wn/${
                           forecastDays.weather[0].icon
                           }50d@2x.png"
-                         alt="icon"
-                          width="36" />
-                    </div> 
-                     <div class="forecast-temp">
+                         alt=""
+                          width="42" />
+                          <div class="forecast-temp">
                         <span class="high">${Math.round(
                           forecastDays.temp.max
                         )}&deg;</span>
@@ -72,9 +70,9 @@ function showWeatherForecast(response) {
                           forecastDays.temp.min
                         )}&deg;</span>
                     </div>
-                </div>
-            </div>`;
-  });
+                   </div>;
+                   `;
+                         });
 forecastHTML= forecastHTML+`</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
