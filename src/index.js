@@ -42,7 +42,7 @@ function showWeatherForecast(response) {
   let forecastElement = document.getElementById("forecast");
 
   let forecastHTML = `<div class="row">`;
-  forecast.forEach(function (forecastDay, index) {
+  forecast.forEach(function (forecastDay,index) {
     if (index < 6){    
     forecastHTML =
     forecastHTML +
