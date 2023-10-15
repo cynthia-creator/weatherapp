@@ -1,9 +1,8 @@
 li {
     color: #810d0d;
-    display: block;
-    text-align: left;
-    font-family: arial, sans-serif;
-    font-size: 12px font-weight 400 height 48px line-height 16px padding-left 9px;
+    font-size: 20px ;
+    line-height: 25px;
+    list-style: none;
 }
 .weather-app {
     font-family:"Quick",sans-serif ;
@@ -18,7 +17,7 @@ background-color: rgba(242, 216,216,0.2);
     max-width: 900px;
     margin: 150px auto;
 }
-#description::first-letter{
+#description:first-letter{
     text-transform: capitalize;
 }
 body{font-family: Arial, Helvetica, sans-serif;
@@ -40,6 +39,7 @@ a:hover{
 }
 a {
     text-decoration: none;
+    color: bisque;
 }
 a.active{color: black;
 text-decoration: none;
@@ -116,6 +116,7 @@ vertical-align: top;
     justify-content: space-between;
     gap: 0;
     list-style: none;
+    position: relative;
 }
     
     .forcast-temp{
