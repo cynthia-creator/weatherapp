@@ -100,7 +100,7 @@ function showTemperature(response) {
   let WindElement = document.querySelector("#wind");
   WindElement.innerHTML = Math.round(response.data.wind.speed);
 
-  let humidityElement = document.querySelector("#humidity");
+  let humidityElemen  = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
 
   let dateElement = document.querySelector("#date");
@@ -111,6 +111,8 @@ function showTemperature(response) {
     "src",
     `https://openweathermap.org/wn/${response.data.weather[0].icon}@2x.png`
   );
+  let description = document.querySelector("#description");
+  description.innerHTML = response.data.weather[0].descritpion;
   celsiusTemperature = response.data.main.temp;
   getForecast(response.data.coord);
 }
