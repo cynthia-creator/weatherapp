@@ -111,9 +111,7 @@ function showTemperature(response) {
     "src",
     `https://openweathermap.org/wn/${response.data.weather[0].icon}@2x.png`
   );
-  let description = document.querySelector("#description");
-  description.innerHTML = response.data.weather[0].descritpion;
-  celsiusTemperature = response.data.main.temp;
+   celsiusTemperature = response.data.main.temp;
   getForecast(response.data.coord);
 }
 
