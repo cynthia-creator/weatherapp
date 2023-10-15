@@ -135,8 +135,8 @@ vertical-align: top;
     top: 40%;
     left: 40%;
     transform:translate(-40%,-40%) ;
-    border: radius 800px;
-    max-width: 900px;
+    border: radius 500px;
+    max-width: 400px;
 
 }
 .col-3 input{
