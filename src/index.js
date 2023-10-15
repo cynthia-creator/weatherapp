@@ -40,7 +40,7 @@ function showWeatherForecast(response) {
   let forecast = response.data.daily;
   console.log(forecast);
   let forecastElement = document.getElementById("forecast");
-
+  
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDays, index) {
     console.log(forecastDays);
@@ -50,14 +50,19 @@ function showWeatherForecast(response) {
     } else {
       dayName = formatDay(forecastDays.dt);
     }
-    forecastHTML += `<div slass="col-2">
+    forecastHTML =
+    forecastHTML +
+     `<div slass="col-2">
     <div class="forecast ${index === 0 ? "highlight" : ""}">
-    
-    <div class="days">
+        <div class="days">
                     <div class="title">${dayName}</div>
+
                     <div class="icon">
-                        <img src="https://openweathermap.org/img/wn/50d@2x.png"
-                         alt="icon" width="36" />
+                        <img src="http://openweathermap.org/img/wn/${
+                          forecastDays.weather[0].icon
+                          }50d@2x.png"
+                         alt="icon"
+                          width="36" />
                     </div> 
                      <div class="forecast-temp">
                         <span class="high">${Math.round(

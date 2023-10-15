@@ -20,7 +20,8 @@ background-color: rgba(242, 216,216,0.2);
 #description:first-letter{
     text-transform: capitalize;
 }
-body{font-family: Arial, Helvetica, sans-serif;
+body{
+    background-image:"https://images.pexels.com/photos/843251/pexels-photo-843251.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" ;
     background-size: cover;
     background-position:center ;
     background-color: aqua;
