@@ -129,6 +129,11 @@ vertical-align: top;
     list-style: none;
     position: relative;
 }
+.weather-temp img{
+    margin-right: 5px;
+    height: 64px;
+    width: 64px;
+}
     
     .forcast-temp{
     font-size: 13px;
