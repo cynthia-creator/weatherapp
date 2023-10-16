@@ -41,7 +41,7 @@ function showWeatherForecast(response) {
   console.log(forecast);
   let forecastElement = document.getElementById("forecast");
 
-  let forecastHTML = `
+  let forecastHTML =`
   <div class="row">`;
   forecast.forEach(function 
     (forecastDay, index) {
@@ -59,7 +59,7 @@ function showWeatherForecast(response) {
                          alt=""
                           width="42"
                            />
-<div class="weather-forecast-temperatures">
+                  <div class="weather-forecast-temperatures">
                           <span class="weather-forecast-temperature-max">${Math.round(
                           forecastDay.temp.max
                         )}°</span>
@@ -71,7 +71,8 @@ function showWeatherForecast(response) {
                    `;
                         }
                          });
-forecastHTML= forecastHTML+`</div>`;
+forecastHTML= forecastHTML+`
+</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
 
