@@ -99,10 +99,8 @@ function showTemperature(response) {
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
 
   let iconElement = document.querySelector("#weather-icon");
-  iconElement.setAttribute(
-    "src",
-    `https://openweathermap.org/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  iconElement.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+  ;
    celsiusTemperature = response.data.main.temp;
   getForecast(response.data.coord);
 }
