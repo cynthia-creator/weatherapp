@@ -62,8 +62,8 @@ function showWeatherForecast(response) {
                           forecastDay.temp.min
                         )}°</span>
                     </div>
-                   </div>;
-                   `;
+                   </div>`;
+                   
                         }
                          });
 forecastHTML= forecastHTML+`</div>`;
