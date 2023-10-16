@@ -45,7 +45,7 @@ function showWeatherForecast(response) {
   <div class="row">`;
   forecast.forEach(function 
     (forecastDay, index) {
-    if (index < 6){    
+    if (index < 10){    
     forecastHTML =
     forecastHTML +
      `
