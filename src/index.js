@@ -33,7 +33,7 @@ function isToday(timestamp) {
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return days[day];
 }
 function showWeatherForecast(response) {
@@ -52,9 +52,8 @@ function showWeatherForecast(response) {
      <div class="col-2">
     <div class="weather-forecast-date">
     ${formatDay(forecastDay.dt)}</div>
-          <img src="http://openweathermap.org/img/wn/
-          ${forecastDay.weather[0].icon
-                          }@2x.png" alt="" width="42"
+    <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}
+    @2x.png" alt="" width="42"
                            />
                   <div class="weather-forecast-temperatures">
          <span class="weather-forecast-temperature-max">${Math.round(
