@@ -1,8 +1,8 @@
 body{
-    margin: 0 auto;
-    text-align: center;
-    background-color: aqua;
+    font-family: "Roboto Mono",monospace;
+    background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/099/371/original/sunny-blue-sky.jpg?1696691870);
     background-size: cover;
+}
     li {
     color: #810d0d;
     font-size: 20px ;
@@ -31,8 +31,6 @@ background-color: rgba(242, 216,216,0.2);
 }
 #description:first-letter{
     text-transform: capitalize;
-}
-
 }
 .elements{
     margin-top: 0;
