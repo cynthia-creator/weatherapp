@@ -26,7 +26,7 @@ padding: 16 px;
 background-color: rgba(242, 216,216,0.2);
 }
 .shadow {
-    max-width: 900px;
+    max-width: 600px;
     margin: 150px auto;
 }
 #description:first-letter{
