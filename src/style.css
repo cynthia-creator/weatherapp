@@ -26,8 +26,9 @@ padding: 16 px;
 background-color: rgba(242, 216,216,0.2);
 }
 .shadow {
-    max-width: 600px;
+    max-width: 800px;
     margin: 150px auto;
+    padding: 10px; ;
 }
 #description:first-letter{
     text-transform: capitalize;
