@@ -28,8 +28,7 @@ background-color: rgba(242, 216,216,0.2);
 .shadow {
     max-width: 800px;
     margin: 150px auto;
-    padding: 12px;
-}
+    }
 #description:first-letter{
     text-transform: capitalize;
 }
