@@ -1,86 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link  rel="stylesheet"   
-   href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
-   integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-    crossorigin="anonymous"/>
-    <link rel="stylesheet"   href="src/style.css"/>
-    <title>weatherapp</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,600&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   </head>
-  <body>
-  <div class="border p-5 mt-3 shadow">
-<div class="card-body">
-  <div  class="container">
-  <div class="weather-app"> 
-    <form class="search-form mb-3" id="city-search-form">
-      <div class="row">
-        <div class="col-9">
-          <input
-          type="search"
-          placeholder="Type in city name"
-          class="form-control w-100"
-          id="search-input"
-          autocomplete="off"
-          />
-          </div>
-        <div class="col-md-3">
-      <input type="submit"
-      value="search"
-      class="btn btn-primary w-100 shadow-lg" id="button"
-      />
+  <body data-sky="clear-day" class="min-h-screen font-sans text-white sky">
+    <main class="mx-auto grid max-w-3xl gap-7 px-5 py-6">
+      <div class="flex items-center gap-3">
+        <form id="search" role="search" class="glass flex flex-1 rounded-full py-1 pl-5 pr-1">
+          <input id="q" type="search" autocomplete="off" aria-label="City" placeholder="Search for a city"
+            class="min-w-0 flex-1 bg-transparent text-base outline-none placeholder:text-white/70" />
+          <button type="submit" class="rounded-full bg-white px-5 py-2.5 font-medium text-slate-800">Search</button>
+        </form>
+        <div class="glass flex rounded-full p-[3px]" role="group" aria-label="Units">
+          <button id="c" aria-pressed="true" class="unit-btn">°C</button>
+          <button id="f" aria-pressed="false" class="unit-btn">°F</button>
+        </div>
       </div>
-      </div>
-    </form> 
-    <h1><span id="city"></span>
-      <span id="country"></span>
-    </h1>
-    <p id="date"></p>
-      <p id="description"></p>
-    <div class="weather">
-    <div class="row">
-     <div
-     class="col-6" weather-temp>
-     <div class="d-flex weather-temperature">
-    <img 
-    class="float-left"
-    src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"    
-    alt="sunny"
-    id="weather-icon"
-    />
-  <span class="temp"  id="temperature"></span>
-  <span class="deg"><a href="#" id="celsius" class="active">
-    &deg;C|</a>
-  </span>
-    <span class="deg"><a href="#" id="farenheit">&deg;F</a></span>
-    </div>
-  </div>
-    <div class="col-6">
-     <ul>  
-    <li>Humidity:
-       <span id="humidity"></span>%</li> 
-    <li>Wind:
-       <span id="wind"></span>km/h</li>  
-     </ul> 
-    </div>  
-  </div>
-  </div>
-  <hr>
-   <div
-  class="forecast" id="forecast">
-  </div>
-  <small>
-    This project was coded by Cynthia Kamuzembe and is a
-    <a
-     href="https://github.com/cynthia-creator/weatherapp"  
-    target="_blank" 
-    >Open source Code</a>
-    
-  </small>
-   </div>
-   <script src="src/index.js"></script>
+
+      <section class="pt-9" aria-live="polite">
+        <div id="place" class="font-display text-2xl font-semibold">Loading…</div>
+        <div id="when" class="mt-1 text-white/70"></div>
+        <div class="mb-2 mt-4 flex items-start font-display text-[clamp(7rem,28vw,13rem)] font-light leading-[.9] tracking-tighter">
+          <span id="temp">--</span><span id="unit" class="mt-5 text-[.28em] font-light leading-none tracking-normal sm:mt-7">°</span>
+        </div>
+        <div class="flex items-center gap-3 text-xl"><span id="ico" class="text-3xl"></span><span id="cond"></span></div>
+      </section>
+
+      <section class="grid grid-cols-3 gap-2 sm:gap-3">
+        <div class="glass rounded-3xl p-3 sm:px-5 sm:py-4"><small class="block text-sm text-white/70">Humidity</small><b id="hum" class="font-display text-xl font-semibold sm:text-2xl">--%</b></div>
+        <div class="glass rounded-3xl p-3 sm:px-5 sm:py-4"><small class="block text-sm text-white/70">Wind</small><b id="wind" class="font-display text-xl font-semibold sm:text-2xl">--</b></div>
+        <div class="glass rounded-3xl p-3 sm:px-5 sm:py-4"><small class="block text-sm text-white/70">Feels like</small><b id="feel" class="font-display text-xl font-semibold sm:text-2xl">--°</b></div>
+      </section>
+
+      <section id="hours" aria-label="Next hours" class="glass flex gap-1.5 overflow-x-auto rounded-3xl p-3.5 [scrollbar-width:none]"></section>
+      <section id="days" aria-label="Forecast" class="glass rounded-3xl px-5 py-1.5"></section>
+
+      <footer class="py-2 text-center text-sm text-white/70">
+        Coded by Cynthia Kamuzembe ·
+        <a class="text-white underline" href="https://github.com/cynthia-creator/weatherapp">Open source code</a>
+      </footer>
+    </main>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

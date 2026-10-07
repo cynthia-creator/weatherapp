@@ -1,161 +1,37 @@
- @import "tailwindcss";
- 
- 
- body{
-    font-family: "Roboto Mono",monospace;
-    background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/099/371/original/sunny-blue-sky.jpg?1696691870);
-    background-size: cover;
-}
-    li {
-    color: #810d0d;
-    font-size: 20px ;
-    line-height: 25px;
-    list-style: none;
-}
-ul{list-style: none;
-    margin: right 25px;
-}
-.container{
-    margin-top: 20px;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    --sky-a: #1e6fd9;
+    --sky-b: #7cc4f8;
+  }
+  body[data-sky="clear-night"] { --sky-a: #0f172a; --sky-b: #3b3a7a; }
+  body[data-sky="cloudy"]      { --sky-a: #475569; --sky-b: #94a3b8; }
+  body[data-sky="rain"]        { --sky-a: #1e293b; --sky-b: #52698a; }
+  body[data-sky="snow"]        { --sky-a: #5b7a99; --sky-b: #c5d6e6; }
+  body[data-sky="storm"]       { --sky-a: #111827; --sky-b: #4b3f72; }
+  :focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
 }
 
-.weather-app {
-    
-    max-width: 425px;
-    margin: 0 auto;
-border: none  ;
-border: radius 20px;
-padding: 16 px;
-background-color: rgba(242, 216,216,0.2);
-}
-.shadow {
-    max-width: 800px;
-    margin: 150px auto;
-    }
-#description:first-letter{
-    text-transform: capitalize;
-}
-.elements{
-    margin-top: 0;
-
-}
-#button{background-color: #2D27FF;
-border-color: #2D27FF;
-border-radius: 10px;
-padding: 5.5px;
-}
-a #farenheit,
-a #celsius{
-    text-decoration: none;
-}
-a:hover{ 
-    cursor: default;
-}
-a {
-    text-decoration: none;
-    color: rgb(226, 5, 178);
-}
-a.active{color: black;
-text-decoration: none;
-}
-h1{
-    color: blue;
-    display: block;
-    font-family: "google sans",arial,sans-serif;
-    font-size: 40px;
-    font-weight: 600;
-    height: 26px;
-    line-height: 48px;
-    text-align: left;
-    margin:20px 0 10px;
-}
-p {
-    color: rgb(70, 31, 175);
-    display: block;
-    font-family: arial,sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    height: 20px;
-    line-height: 20px;
-    text-align: left;
-    margin: 0;
-}
-.weather{
-    margin-top: 20px;
-    text-align: center;
-}
-.cloud{
-    color: bisque;
-    display: inline-block;
-    font-family: arial, sans-serif;
-    font-size: 16px;
-    font-weight: 400 ;
-    height: 60px;
-    margin-top: 0px;
-    overflow-clip-margin: content-box;
-    overflow-x: clip;
-    vertical-align: top;
-    width: 60px;;
-}
-.temp{
-    color: bisque;
-    display: inline;
-    font-family: "G00gle" Sans-serif ,sans-serif;
-    font-size: 40px;
-    font-weight: 400;
-    height: auto;
-    line-height: 56px;
-    margin-left: 0;
-}
-input{
-    margin-bottom: 10px;
+@layer components {
+  .sky {
+    background: linear-gradient(170deg, var(--sky-a), var(--sky-b));
+    background-attachment: fixed;
+    transition: background 1s;
+  }
+  .glass {
+    @apply border border-white/30 bg-white/15 backdrop-blur-xl;
+  }
+  .unit-btn {
+    @apply rounded-full px-3.5 py-2 text-white/70;
+  }
+  .unit-btn[aria-pressed="true"] {
+    @apply bg-white text-slate-800;
+  }
 }
 
-
-.deg{
-color: bisque;
-display: inline-block;
-font-family:arial, sans-serif;
-font-size: 16px;
-font-weight: 400;
-height: 24px;
-line-height: 24px;
-margin-top: 6px;
-vertical-align: top;
-}
-.forcast-days{
-    display:inline-flex;
-    justify-content: space-between;
-    gap: 0;
-    list-style: none;
-    position: relative;
-}
-.weather-temp img{
-    margin-right: 5px;
-    height: 64px;
-    width: 64px;
-}
-    
-    .forcast-temp{
-    font-size: 13px;
-}
-.forcast-temp .low{
-    color: aqua;
-}
-.highlight{
-    background-color: #2D27FF #FF0A6C;
-    font-weight: bold;
-    padding: 16px;
-    box-sizing: border-box;
-}
-col input{
-    border-radius: 30px;
-    background: #33408a;
-}
-.col-9 input{
-    border-radius: 10px;
-    border:1px solid #33408a ;
-}
-small{
-    color: aqua;
+@media (prefers-reduced-motion: reduce) {
+  .sky { transition: none; }
 }
